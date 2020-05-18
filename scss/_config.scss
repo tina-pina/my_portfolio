@@ -1,0 +1,42 @@
+$primary-color:#84E8DD;
+$secondary-color: #FF25E1;
+$show-home-image: true;
+$background-opacity: 0.7;
+$home-image-sm: url('../img/unicorn_cat.jpg');
+$home-image-bg: url('../img/unicorn_cat1.jpg');
+
+
+@mixin easeOut {
+    transition: all 0.5s ease-out;
+}
+
+@mixin background {
+    @if $show-home-image {
+        &#bg-img {
+            @media (min-width: 769px) {
+                background: $home-image-bg;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+            }
+
+            @media (max-width: 768px) {
+                background: $home-image-sm;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background: rgba($primary-color, $background-opacity);
+            }
+        }
+    }
+}
