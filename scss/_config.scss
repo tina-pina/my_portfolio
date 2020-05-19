@@ -1,4 +1,5 @@
-$primary-color:#84E8DD;
+// $primary-color:#84E8DD;
+$primary-color: grey;
 $secondary-color: #FF25E1;
 $show-home-image: true;
 $background-opacity: 0.8;
@@ -45,6 +46,17 @@ $home-image-bg: url('../img/unicorn_cat1.jpg');
                 background: rgba($primary-color, $background-opacity);
             }
         }
+    }
+}
+
+// set text color
+@function set-text-color($color) {
+    @if (lightness($color)) < 40 {
+        @return #000;
+    }
+
+    @else {
+        @return #fff;
     }
 }
 
