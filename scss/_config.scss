@@ -13,18 +13,25 @@ $home-image-bg: url('../img/unicorn_cat1.jpg');
 @mixin background {
     @if $show-home-image {
         &#bg-img {
-            @media (min-width: 769px) {
-                background: $home-image-bg;
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                background-position: center;
-            }
 
-            @media (max-width: 768px) {
-                background: $home-image-sm;
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                background-position: center;
+            // media queries for background picture change
+            background: $home-image-bg;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            // @media screen and (min-width: 769px) {
+            //     background: $home-image-bg;
+            //     background-repeat: no-repeat;
+            //     background-attachment: fixed;
+            //     background-position: center;
+            // }
+
+            @media screen and (max-width: 768px) {
+                // background: $home-image-sm;
+                // background-repeat: no-repeat;
+                // background-attachment: fixed;
+                // background-position: center;
+                background-size: 75%;
             }
 
             &:after {
@@ -38,5 +45,30 @@ $home-image-bg: url('../img/unicorn_cat1.jpg');
                 background: rgba($primary-color, $background-opacity);
             }
         }
+    }
+}
+
+// other media queries
+@mixin mediaSm {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin mediaMd {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mediaLg {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        @content;
+    }
+}
+
+@mixin mediaXl {
+    @media screen and (min-width: 1171px) {
+        @content;
     }
 }
