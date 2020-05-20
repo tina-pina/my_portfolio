@@ -242,6 +242,8 @@ main {
 
 .boxes {
   margin: 1rem; }
+  .boxes .text-secondary {
+    color: #fff; }
   .boxes:hover {
     background: #FF25E1;
     color: #fff; }
@@ -273,13 +275,11 @@ main {
 
 #contact-main-footer {
   text-align: center;
-  display: flex;
-  flex-grow: 1;
   padding: 1rem;
   background: #676767;
   color: #fff;
   display: block;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
   width: 100%; }
@@ -346,5 +346,4 @@ main {
     font-size: 1rem;
     border: 1px solid #fff;
     padding: 1rem 2rem;
-    margin-bottom: 2rem;
     transition: all 0.5s ease-out; } }
