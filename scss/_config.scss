@@ -20,18 +20,8 @@ $home-image-bg: url('../img/unicorn_cat1.jpg');
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center;
-            // @media screen and (min-width: 769px) {
-            //     background: $home-image-bg;
-            //     background-repeat: no-repeat;
-            //     background-attachment: fixed;
-            //     background-position: center;
-            // }
 
             @media screen and (max-width: 768px) {
-                // background: $home-image-sm;
-                // background-repeat: no-repeat;
-                // background-attachment: fixed;
-                // background-position: center;
                 background-size: 75%;
             }
 

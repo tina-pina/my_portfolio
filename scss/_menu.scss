@@ -1,4 +1,4 @@
-// Menu Button
+// menu Button
 .menu-btn {
     position: absolute;
     z-index: 3;
@@ -40,7 +40,7 @@
     }
 }
 
-// Menu overlay
+// menu overlay
 .menu {
     position: fixed;
     top: 0;
@@ -105,7 +105,7 @@
         @include easeOut;
 
         &.show {
-            //Slide in from right
+            // slide in from right
             transform: translate3d(0, 0, 0);
         }
 
