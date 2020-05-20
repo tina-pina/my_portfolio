@@ -150,7 +150,7 @@ header {
 
 main {
   padding: 3rem;
-  min-height: calc(100vh -60px); }
+  min-height: calc(100vh -60px) !important; }
   main#bg-img {
     background: url("../img/unicorn_cat1.jpg");
     background-repeat: no-repeat;
@@ -179,6 +179,10 @@ main {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
+  main#contact {
+    display: flex;
+    flex-grow: 1;
+    flex-flow: column; }
 
 .about-info {
   display: grid;
@@ -223,6 +227,27 @@ main {
         border-color: #FF25E1;
         transition: all 0.5s ease-out; }
 
+.contact-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .contact-details div {
+    font-size: 2rem;
+    border: 1px solid #fff;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+
+.boxes {
+  margin: 1rem; }
+  .boxes:hover {
+    background: #FF25E1;
+    color: #fff; }
+    .boxes:hover span {
+      color: #fff; }
+
 .btn, .btn-dark, .btn-light {
   display: block;
   padding: 0.5rem 1rem;
@@ -244,8 +269,22 @@ main {
   text-align: center;
   padding: 1rem;
   background: #676767;
+  color: #fff; }
+
+#contact-main-footer {
+  text-align: center;
+  display: flex;
+  flex-grow: 1;
+  padding: 1rem;
+  background: #676767;
   color: #fff;
-  height: 60px; }
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%; }
+  #contact-main-footer .copyright {
+    margin: 0 auto; }
 
 @media screen and (min-width: 1171px) {
   .projects {
@@ -286,7 +325,13 @@ main {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .contact-details div {
+    font-size: 1.5rem;
+    border: 1px solid #fff;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.5s ease-out; } }
 
 @media screen and (max-width: 500px) {
   main#home {
@@ -296,4 +341,10 @@ main {
     margin-top: 10vh;
     font-size: 4rem; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .contact-details div {
+    font-size: 1rem;
+    border: 1px solid #fff;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.5s ease-out; } }

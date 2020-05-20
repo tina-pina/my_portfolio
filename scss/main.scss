@@ -50,13 +50,9 @@ header {
 }
 
 main {
-    // img {
-    //     height: 200px;
-    //     width: 200px
-    // }
     @include background;
     padding: 3rem;
-    min-height: calc(100vh -60px);
+    min-height: calc(100vh -60px) !important;
 
     .icons {
         margin-top: 1rem;
@@ -77,6 +73,13 @@ main {
         h1 {
             margin-top: 20vh;
         }
+    }
+
+    &#contact {
+        display: flex;
+        flex-grow: 1;
+        flex-flow: column;
+
     }
 }
 
@@ -149,7 +152,38 @@ main {
     }
 }
 
-// Button styles
+// contact page
+.contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+
+    div {
+        font-size: 2rem;
+        border: 1px solid #fff;
+        padding: 1.5rem 2.5rem;
+        margin-bottom: 3rem;
+        @include easeOut;
+    }
+}
+
+.boxes {
+    margin: 1rem;
+
+    &:hover {
+        background: $secondary-color;
+
+        color: set-text-color($secondary-color);
+
+        span {
+            color: set-text-color($secondary-color)
+        }
+    }
+}
+
+// button styles
 .btn {
     display: block;
     padding: 0.5rem 1rem;
@@ -180,7 +214,26 @@ main {
     padding: 1rem;
     background: darken($primary-color, 10);
     color: set-text-color($primary-color);
-    height: 60px;
 }
+
+#contact-main-footer {
+    text-align: center;
+    display: flex;
+    flex-grow: 1;
+    padding: 1rem;
+    background: darken($primary-color, 10);
+    color: set-text-color($primary-color);
+    // flex-direction: center;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+
+    .copyright {
+        margin: 0 auto;
+    }
+}
+
 
 @import 'mobile';
