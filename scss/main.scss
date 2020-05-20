@@ -2,233 +2,234 @@
 @import 'menu';
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  @include background;
-  background: $primary-color;
-  color: set-text-color($primary-color);
-  height: 100%;
-  margin: 0;
-  font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.5;
+    @include background;
+    background: $primary-color;
+    color: set-text-color($primary-color);
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
 }
 
 h1,
 h2,
 h3 {
-  margin: 0;
-  font-weight: 400;
+    margin: 0;
+    font-weight: 400;
 
-  &.lg-heading {
-    font-size: 6rem;
-  }
+    &.lg-heading {
+        font-size: 6rem;
+    }
 
-  &.sm-heading {
-    margin-bottom: 2rem;
-    padding: 1rem 1rem;
-    color: set-text-color($primary-color);
-    background: rgba(darken($primary-color, 4), 0.7);
-  }
+    &.sm-heading {
+        margin-bottom: 2rem;
+        padding: 1rem 1rem;
+        color: set-text-color($primary-color);
+        background: rgba(darken($primary-color, 4), 0.7);
+    }
 }
 
 a {
-  color: set-text-color($primary-color);
-  text-decoration: none;
+    color: set-text-color($primary-color);
+    text-decoration: none;
 }
 
 header {
-  position: fixed;
-  z-index: 2;
-  width: 100%;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
 }
 
 .text-secondary {
-  color: $secondary-color;
+    color: $secondary-color;
 }
 
 main {
-  @include background;
-  padding: 3rem;
-  min-height: calc(100vh -60px) !important;
+    @include background;
+    padding: 3rem;
+    min-height: calc(100vh -60px) !important;
 
-  .icons {
-    margin-top: 1rem;
+    .icons {
+        margin-top: 1rem;
 
-    a {
-      padding: 0.4rem;
+        a {
+            padding: 0.4rem;
 
-      &:hover {
-        color: $secondary-color;
-        @include easeOut();
-      }
+            &:hover {
+                color: $secondary-color;
+                @include easeOut();
+            }
+        }
     }
-  }
 
-  &#home {
-    overflow: hidden;
+    &#home {
+        overflow: hidden;
 
-    h1 {
-      margin-top: 20vh;
+        h1 {
+            margin-top: 20vh;
+        }
     }
-  }
 
-  &#contact {
-    display: flex;
-    flex-grow: 1;
-    flex-flow: column;
-  }
+    &#contact {
+        display: flex;
+        flex-grow: 1;
+        flex-flow: column;
+    }
 }
 
 .about-info {
-  display: grid;
-  grid-gap: 30px;
-  grid-template-areas:
-    'bioimage bio bio'
-    'job1 job2 job3';
-  grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas:
+        'bioimage bio bio'
+        'job1 job2 job3';
+    grid-template-columns: repeat(3, 1fr);
 
-  .bio-image {
-    grid-area: bioimage;
-    margin: auto;
-    border-radius: 10%;
-    border: $secondary-color 3px solid;
-    height: 260px;
-  }
-
-  .bio {
-    grid-area: bio;
-    font-size: 1.5rem;
-
-    .instagram {
-      font-size: 1.5rem;
+    .bio-image {
+        grid-area: bioimage;
+        margin: auto;
+        border-radius: 10%;
+        border: $secondary-color 3px solid;
+        height: 260px;
     }
-  }
 
-  .job-1 {
-    grid-area: job1;
-  }
+    .bio {
+        grid-area: bio;
+        font-size: 1.5rem;
 
-  .job-2 {
-    grid-area: job2;
-  }
+        .instagram {
+            font-size: 1.5rem;
+        }
+    }
 
-  .job-3 {
-    grid-area: job3;
-  }
+    .job-1 {
+        grid-area: job1;
+    }
 
-  .job {
-    background: lighten($primary-color, 5);
-    padding: 0.5rem;
-    border-bottom: $secondary-color 5px solid;
-  }
+    .job-2 {
+        grid-area: job2;
+    }
+
+    .job-3 {
+        grid-area: job3;
+    }
+
+    .job {
+        background: lighten($primary-color, 5);
+        padding: 0.5rem;
+        border-bottom: $secondary-color 5px solid;
+    }
 }
 
 // Work/Projects
 .projects {
-  display: grid;
-  grid-gap: 0.7rem;
-  grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    grid-gap: 0.7rem;
+    grid-template-columns: repeat(3, 1fr);
 
-  .item {
-    display: flex;
-    flex-grow: 1;
-    flex-flow: column;
+    .item {
+        display: flex;
+        flex-grow: 1;
+        flex-flow: column;
 
-    img {
-      width: 100%;
-      border: 3px #fff solid;
+        img {
+            width: 100%;
+            border: 3px #fff solid;
 
-      &:hover {
-        opacity: 0.5;
-        border-color: $secondary-color;
-        @include easeOut;
-      }
+            &:hover {
+                opacity: 0.5;
+                border-color: $secondary-color;
+                @include easeOut;
+            }
+        }
     }
-  }
 }
 
 // contact page
 .contact-details {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
 
-  div {
-    font-size: 2rem;
-    border: 1px solid #fff;
-    padding: 1.5rem 2.5rem;
-    margin-bottom: 3rem;
-    @include easeOut;
-  }
+    div {
+        font-size: 2rem;
+        border: 1px solid #fff;
+        padding: 1.5rem 2.5rem;
+        margin-bottom: 3rem;
+        @include easeOut;
+    }
 }
 
 .boxes {
-  margin: 1rem;
-  .text-secondary {
-    color: #fff;
-  }
+    margin: 1rem;
 
-  &:hover {
-    background: $secondary-color;
-
-    color: set-text-color($secondary-color);
-
-    span {
-      color: set-text-color($secondary-color);
+    .text-secondary {
+        color: #fff;
     }
-  }
+
+    &:hover {
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+        cursor: pointer;
+
+        span {
+            color: set-text-color($secondary-color);
+        }
+    }
 }
 
 // button styles
 .btn {
-  display: block;
-  padding: 0.5rem 1rem;
-  border: 0;
-  margin-bottom: 0.3rem;
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem;
 
-  &:hover {
-    background: $secondary-color;
-    color: set-text-color($secondary-color);
-  }
+    &:hover {
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+    }
 }
 
 .btn-dark {
-  @extend .btn;
-  background: darken($primary-color, 40);
-  color: #fff;
+    @extend .btn;
+    background: darken($primary-color, 40);
+    color: #fff;
 }
 
 .btn-light {
-  @extend .btn;
-  background: lighten($primary-color, 40);
-  color: #000;
+    @extend .btn;
+    background: lighten($primary-color, 40);
+    color: #000;
 }
 
 #main-footer {
-  text-align: center;
-  padding: 1rem;
-  background: darken($primary-color, 10);
-  color: set-text-color($primary-color);
+    text-align: center;
+    padding: 1rem;
+    background: darken($primary-color, 10);
+    color: set-text-color($primary-color);
 }
 
 #contact-main-footer {
-  text-align: center;
-  padding: 1rem;
-  background: darken($primary-color, 10);
-  color: set-text-color($primary-color);
-  display: block;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 100%;
+    text-align: center;
+    padding: 1rem;
+    background: darken($primary-color, 10);
+    color: set-text-color($primary-color);
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
 
-  .copyright {
-    margin: 0 auto;
-  }
+    .copyright {
+        margin: 0 auto;
+    }
 }
 
 @import 'mobile';
