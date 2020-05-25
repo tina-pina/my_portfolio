@@ -414,9 +414,14 @@ main#contact {
   margin: 1rem;
 }
 
+.boxes .text-secondary {
+  color: #fff;
+}
+
 .boxes:hover {
   background: #FF25E1;
   color: #fff;
+  cursor: pointer;
 }
 
 .boxes:hover span {
@@ -458,10 +463,14 @@ main#contact {
   background: #676767;
   color: #fff;
   display: block;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
   width: 100%;
+}
+
+#contact-main-footer .copyright {
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 1171px) {
@@ -555,7 +564,6 @@ main#contact {
     font-size: 1rem;
     border: 1px solid #fff;
     padding: 1rem 2rem;
-    margin-bottom: 2rem;
     -webkit-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
   }
