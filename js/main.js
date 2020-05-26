@@ -4,6 +4,8 @@ const menu = document.querySelector ('.menu');
 const menuNav = document.querySelector ('.menu-nav');
 const menuBranding = document.querySelector ('.menu-branding');
 const navItems = document.querySelectorAll ('.nav-item');
+const logo = document.querySelector ('.logo');
+const logoImg = document.getElementById ('image_logo');
 
 // Set initial state of menu
 let showMenu = false;
@@ -17,6 +19,9 @@ function toggleMenu () {
     menuNav.classList.add ('show');
     menuBranding.classList.add ('show');
     navItems.forEach (item => item.classList.add ('show'));
+    if (logoImg) {
+      logoImg.parentNode.removeChild (logoImg);
+    }
 
     // Set Menu State
     showMenu = true;
@@ -26,7 +31,9 @@ function toggleMenu () {
     menuNav.classList.remove ('show');
     menuBranding.classList.remove ('show');
     navItems.forEach (item => item.classList.remove ('show'));
-
+    if (logoImg) {
+      logoImg.parentNode.appendChild (logoImg);
+    }
     // Set Menu State
     showMenu = false;
   }
