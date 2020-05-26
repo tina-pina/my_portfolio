@@ -1,7 +1,32 @@
+//header
+header {
+    &.home {
+        text-align: center;
+        margin: 0 auto;
+        height: 110px;
+        color: white;
+        background-color: white;
+        border: darkgrey 1px solid;
+        opacity: 0.9;
+    }
+}
+
+// logo
+.logo.img {
+    img {
+        position: absolute;
+        z-index: 3;
+        top: 0px;
+        left: 30px;
+        height: 100px;
+    }
+}
+
+
 // menu Button
 .menu-btn {
     position: absolute;
-    z-index: 3;
+    z-index: 1;
     right: 35px;
     top: 35px;
     cursor: pointer;
@@ -11,8 +36,7 @@
         width: 28px;
         height: 3px;
         margin: 0 0 5px 0;
-        background: set-text-color($primary-color);
-        ;
+        background: #000;
         @include easeOut;
     }
 
@@ -45,8 +69,8 @@
     position: fixed;
     top: 0;
     width: 100%;
-    opacity: 0.95;
     visibility: hidden;
+    z-index: 1px;
 
     &.show {
         visibility: visible;
@@ -59,6 +83,7 @@
         align-items: center;
         justify-content: center;
         float: left;
+        padding: 1.5rem 0;
         width: 50%;
         height: 100vh;
         overflow: hidden;
