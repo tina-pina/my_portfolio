@@ -8,6 +8,18 @@ header {
         background-color: white;
         border: darkgrey 1px solid;
         opacity: 0.9;
+
+        .menu-btn {
+            .btn-line {
+                background: #000;
+            }
+        }
+
+        .menu-btn.close {
+            .btn-line {
+                background: #fff;
+            }
+        }
     }
 }
 
@@ -36,7 +48,7 @@ header {
         width: 28px;
         height: 3px;
         margin: 0 0 5px 0;
-        background: #000;
+        background: set-text-color($primary-color);
         @include easeOut;
     }
 

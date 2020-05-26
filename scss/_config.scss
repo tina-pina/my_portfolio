@@ -1,5 +1,4 @@
-// $primary-color:#84E8DD;
-$primary-color:#B3B3B3;
+$primary-color:#575757;
 $secondary-color:#2BD4D1;
 
 $show-home-image: true;
@@ -43,11 +42,11 @@ $home-image-bg: url('../img/unicorn_cat1.jpg');
 // set text color
 @function set-text-color($color) {
     @if (lightness($color)) < 40 {
-        @return #000;
+        @return #fff;
     }
 
     @else {
-        @return #fff;
+        @return #000;
     }
 }
 
