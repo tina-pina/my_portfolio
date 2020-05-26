@@ -89,12 +89,17 @@ main {
         'job1 job2 job3';
     grid-template-columns: repeat(3, 1fr);
 
+    // img.bio-image {
+    //     max-height: 10rem;
+    // }
+
     .bio-image {
         grid-area: bioimage;
         margin: auto;
         border-radius: 10%;
         border: $secondary-color 3px solid;
         height: 260px;
+        z-index: 1;
     }
 
     .bio {
