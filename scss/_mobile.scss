@@ -3,12 +3,20 @@
   .projects {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .nav-item:nth-child(1) {
+    margin-top: 3rem;
+  }
 }
 
 // Desktop & Laptops
 @include mediaLg {
   .projects {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .nav-item:nth-child(1) {
+    margin-top: 3rem;
   }
 }
 
@@ -18,9 +26,11 @@
     align-items: center;
     text-align: center;
 
-    .lg-heading {
+    h1.lg-heading {
       line-height: 1;
+      padding-top: 3rem;
       margin-bottom: 1rem;
+      font-size: 5rem
     }
   }
 
@@ -81,6 +91,30 @@
 
 // Smartphones
 @include mediaSm {
+
+  .logo.img {
+    img {
+      height: 80px;
+      top: 20px;
+    }
+  }
+
+  .menu .show {
+    background-color: #737373;
+  }
+
+  .nav-item {
+    .current {
+      text-shadow: 1px 2px #fff;
+    }
+
+    font-weight: bold;
+  }
+
+  .nav-link {
+    text-shadow: 1px 2px #000;
+  }
+
   main#home {
     align-items: center;
     text-align: center;
@@ -89,6 +123,10 @@
   main#home h1 {
     margin-top: 10vh;
     font-size: 4rem;
+  }
+
+  img.bio-image {
+    max-height: 10rem;
   }
 
   .projects {
